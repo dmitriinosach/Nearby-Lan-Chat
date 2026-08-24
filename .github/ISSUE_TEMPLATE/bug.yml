@@ -1,0 +1,49 @@
+name: Что-то сломалось
+description: Программа ведёт себя не так, как обещает
+labels: ["баг"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Кнопка «Сообщить об ошибке» в настройках «Рядом» кладёт диагностику
+        в буфер обмена. Вставьте её в последнее поле — там версия, система
+        и последние строки лога, и ничего из переписки.
+
+  - type: textarea
+    id: chto
+    attributes:
+      label: Что произошло
+      description: Одним-двумя предложениями, своими словами.
+      placeholder: Нажал «Позвонить», окно замерло на «соединяемся» и больше ничего.
+    validations:
+      required: true
+
+  - type: textarea
+    id: kak
+    attributes:
+      label: Как повторить
+      description: По шагам. Если повторяется не всегда — так и напишите.
+      placeholder: |
+        1. Запустил на обеих машинах
+        2. Открыл переписку с Надей
+        3. Нажал на трубку
+    validations:
+      required: false
+
+  - type: input
+    id: versiya
+    attributes:
+      label: Версия
+      description: Настройки → в самом низу. Или из диагностики ниже.
+      placeholder: v1.4.2
+    validations:
+      required: false
+
+  - type: textarea
+    id: diagnostika
+    attributes:
+      label: Диагностика
+      description: Из кнопки «Сообщить об ошибке». Вставляется как есть.
+      render: text
+    validations:
+      required: false

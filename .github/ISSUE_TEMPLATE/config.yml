@@ -1,0 +1,8 @@
+# blank_issues_enabled: false — пустая форма пропускает мимо всех
+# вопросов, а без версии и лога отчёт превращается в переписку «а какая
+# у вас сборка».
+blank_issues_enabled: false
+contact_links:
+  - name: Спросить в Discord
+    url: https://discord.gg/6gW75qKbcW
+    about: Живой чат — если это не баг, а вопрос «а как сделать вот так»
